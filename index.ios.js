@@ -5,8 +5,11 @@
 'use strict';
 
 var React = require('react-native');
+var Parse = require('parse').Parse;
+Parse.initialize('JksqOy90Tn2Ha2Q0URVFjUlF3LLFjIVpvMIHZ2MO', 'kjI3KWFgCGxkO279rF2G3e6oqKsQhETPIyssWajr');
 
 window.React = React;
+window.Parse = Parse;
 
 var {
   AppRegistry,
@@ -21,6 +24,7 @@ var Yenta = React.createClass({
     return (
       <NavigatorIOS
         style={styles.container}
+        navigationBarHidden={true}
         initialRoute={{
           title: 'Login',
           component: Login,
